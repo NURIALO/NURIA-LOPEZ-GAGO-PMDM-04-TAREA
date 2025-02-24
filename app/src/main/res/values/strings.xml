@@ -4,6 +4,13 @@
     <string name="characters">Personajes</string>
     <string name="collectibles">Coleccionables</string>
     <string name="title_about">Acerca de</string>
-    <string name="text_about">Aplicación desarrollada por \n <b>Lindsay Barrero Martínez.</b></string>
+    <string name="text_about">Aplicación desarrollada por \n <b>Nuria López Gago.</b></string>
     <string name="accept">Aceptar</string>
+
+    <string name="bienvenido">Bienvenido a la Guía de Spyro</string>
+    <string name="comenzar">COMENZAR</string>
+    <string name="texto_1">Prepárate para explorar el mundo mágico de esta aplicación inspirada en...</string>
+    <string name="texto2">"Aquí aprenderás a navegar por pestañas llenas de dragones, mundos fascinantes y montones de tesoros brillantes.\n¿Listo para empezar? \n\nPulsa \"Comenzar\" y deja que Spyro te lleve volando a través de esta guía interactiva. "</string>
+    <string name="guide_text">Bienvenido a la aplicación. Aquí aprenderás a navegar.</string>
+    <string name="close">Cerrar</string>
 </resources>

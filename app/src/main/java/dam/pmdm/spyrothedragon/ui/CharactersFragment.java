@@ -35,14 +35,16 @@ public class CharactersFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
         binding = FragmentCharactersBinding.inflate(inflater, container, false);
-        // Inicializamos el RecyclerView y el adaptador
+        //inicio el RecyclerView y el adaptador
         recyclerView = binding.recyclerViewCharacters;
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         charactersList = new ArrayList<>();
-        adapter = new CharactersAdapter(charactersList);
+        charactersList = new ArrayList<>();  //me aseguro de inicializar antes de usar
+        adapter = new CharactersAdapter(getContext(), this, charactersList);
         recyclerView.setAdapter(adapter);
+        FireAnimationView fireAnimationView = binding.getRoot().findViewById(R.id.fireAnimationView);
 
-        // Cargamos los personajes desde el XML
+        //se cargan los personajes desde el XML
         loadCharacters();
         return binding.getRoot();
     }
@@ -55,7 +57,7 @@ public class CharactersFragment extends Fragment {
 
     private void loadCharacters() {
         try {
-            // Cargamos el archivo XML desde res/xml (NOTA: ahora se usa R.xml.characters)
+            //cargo el archivo XML desde res/xml (NOTA: ahora se usa R.xml.characters)
             InputStream inputStream = getResources().openRawResource(R.raw.characters);
 
             // Crear un parser XML
@@ -99,10 +101,13 @@ public class CharactersFragment extends Fragment {
                 eventType = parser.next();
             }
 
-            adapter.notifyDataSetChanged(); // Notificamos al adaptador que los datos han cambiado
+            adapter.notifyDataSetChanged(); //notifico al adaptador que los datos han cambiado
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    public FireAnimationView getFireAnimationView() {
+        return binding.getRoot().findViewById(R.id.fireAnimationView);
     }
 
 }

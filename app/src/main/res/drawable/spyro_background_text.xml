@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 🔹 Borde morado oscuro con degradado -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:startColor="#F0DD2F"
+            android:centerColor="#D920C9"
+            android:endColor="#B014B3"
+            android:type="linear"/>
+            <stroke android:width="8dp" android:color="#9F47C5"/>
+            <corners android:radius="32dp"/> <!-- Bordes redondeados -->
+        </shape>
+    </item>
+
+</layer-list>

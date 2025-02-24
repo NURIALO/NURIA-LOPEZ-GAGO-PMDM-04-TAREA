@@ -22,6 +22,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- Actividad para reproducir el video en pantalla completa -->
+        <activity android:name=".ui.VideoFragment"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:ignore="Instantiatable" />
+
+        <!-- Otros fragments -->
+        <activity android:name=".ui.CollectiblesFragment"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".ui.CharactersFragment"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".ui.WorldsFragment"
+            tools:ignore="Instantiatable" />
     </application>
 
 </manifest>

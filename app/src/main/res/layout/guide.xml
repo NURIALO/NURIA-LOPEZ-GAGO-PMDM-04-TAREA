@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/guideLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#77FFFFFF"
+    android:clickable="true"
+    android:focusable="true">
+    <!-- Pantalla de Bienvenida -->
+    <LinearLayout
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/spyro_background"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/bienvenido"
+            android:textColor="@android:color/white"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTexto1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/texto_1"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:paddingBottom="20dp"/>
+
+        <ImageView
+            android:id="@+id/imgSpyroLogo"
+            android:layout_width="200dp"
+            android:layout_height="106dp"
+            android:contentDescription="Logo de Spyro"
+            android:paddingBottom="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/spyro_logo" />
+
+        <TextView
+            android:id="@+id/tvTexto2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/texto2"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:paddingBottom="20dp"/>
+
+        <ImageView
+            android:id="@+id/imgSpyroLogoVolando"
+            android:layout_width="237dp"
+            android:layout_height="157dp"
+            android:contentDescription="Logo de Spyro volando"
+            android:paddingBottom="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/spyro_volando"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnStartGuide"
+                android:layout_width="163dp"
+                android:layout_height="118dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/comenzar"
+                android:scaleType="centerInside"
+                android:src="@drawable/gems"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/comenzar"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"/>
+        </FrameLayout>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/pulseImage"
+        android:layout_width="300dp"
+
+        android:layout_height="300dp"
+        android:src="@drawable/pulse_with_border"
+        android:visibility="gone"
+
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="-150dp"
+        android:layout_marginStart="-90dp" />
+
+    <ImageView
+        android:id="@+id/pulseImage2"
+
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/pulse_with_border"
+        android:visibility="gone"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="-150dp"
+        android:layout_marginStart="75dp" />
+
+    <ImageView
+        android:id="@+id/pulseImage3"
+
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/pulse_with_border"
+        android:visibility="gone"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="-150dp"
+        android:layout_marginStart="240dp" />
+
+    <ImageView
+        android:id="@+id/pulseImage4"
+        android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:src="@drawable/pulse_with_border"
+    android:visibility="gone"
+    android:layout_gravity="top|end"
+    android:layout_marginTop="-40dp"
+    android:layout_marginEnd="-50dp"
+    tools:ignore="RtlHardcoded"/>
+
+    <ImageView
+        android:id="@+id/arrowIndicator"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_arrow"
+
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textStep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="270dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:padding="30dp"
+    android:background="@drawable/spyro_background_text"
+    android:gravity="center"
+        android:maxWidth="600dp"
+    android:maxLines="4"
+    android:text=""
+    android:textColor="@color/white"
+    android:textSize="40sp"
+    android:elevation="10dp"
+
+        android:visibility="gone"/>
+
+
+    <android.widget.Button
+        android:id="@+id/btnExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:text="SALTAR GUIA"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:visibility="gone"
+        tools:ignore="RtlHardcoded"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_exit"/>
+
+
+    <LinearLayout
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/spyro_background_text"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:elevation="10dp"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/btnNextText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGUIENTE"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"/>
+
+        <ImageView
+            android:id="@+id/btnNextArrow"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_arrow_right"
+            android:tint="@android:color/white"
+            tools:ignore="UseAppTint" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/guideSummary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="16dp"
+        android:background="@drawable/spyro_background"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/summaryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¡HAS COMPLETADO LA GUIA!"
+            android:textSize="44sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/summaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hasta aquí has explorado todas las funciones principales de la aplicación que necesitas conocer sobre el juego. ¡Ahora estás listo para comenzar!"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="@android:color/white"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp"/>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:background="@drawable/border_yellow"> <!-- 🔹 Borde amarillo -->
+
+            <ImageView
+                android:id="@+id/imgSpyroEnd"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:scaleType="fitCenter"/>
+        </FrameLayout>
+
+        <Button
+            android:layout_marginTop="28dp"
+            android:id="@+id/btnFinishGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COMENZAR EL JUEGO!!"
+            android:background="@drawable/btn_next_selector"
+            android:textColor="@android:color/white"
+            android:padding="12dp"/>
+    </LinearLayout>
+
+</FrameLayout>

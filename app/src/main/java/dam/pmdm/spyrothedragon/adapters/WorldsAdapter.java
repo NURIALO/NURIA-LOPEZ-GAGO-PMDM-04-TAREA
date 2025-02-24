@@ -32,7 +32,7 @@ public class WorldsAdapter extends RecyclerView.Adapter<WorldsAdapter.WorldsView
         World world = list.get(position);
         holder.nameTextView.setText(world.getName());
 
-        // Cargar la imagen (simulado con un recurso drawable)
+        //se carga la imagen (simulado con un recurso drawable)
         int imageResId = holder.itemView.getContext().getResources().getIdentifier(world.getImage(), "drawable", holder.itemView.getContext().getPackageName());
         holder.imageImageView.setImageResource(imageResId);
     }

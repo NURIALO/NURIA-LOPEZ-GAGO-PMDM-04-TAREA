@@ -1,11 +1,18 @@
 package dam.pmdm.spyrothedragon.ui;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.MediaController;
+import android.widget.Toast;
+import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -36,7 +43,7 @@ public class CollectiblesFragment extends Fragment {
         recyclerView = binding.recyclerViewCollectibles;
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         collectiblesList = new ArrayList<>();
-        adapter = new CollectiblesAdapter(collectiblesList);
+        adapter = new CollectiblesAdapter(this, collectiblesList); //paso "this" (fragmento actual)
         recyclerView.setAdapter(adapter);
 
         loadCollectibles();
@@ -98,5 +105,18 @@ public class CollectiblesFragment extends Fragment {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+   public void startEasterEggVideo() {
+       requireActivity().getSupportFragmentManager()
+               .beginTransaction()
+               .replace(R.id.navHostFragment, new VideoFragment()) // Reemplaza el fragmento actual con el de video
+               .addToBackStack(null) // Permite volver atrás después del video
+               .commit();
+   }
+
+    public void activateEasterEgg() {
+        System.out.println("🎬 Iniciando Easter Egg...");
+        startEasterEggVideo();
     }
 }
